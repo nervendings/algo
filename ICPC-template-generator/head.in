@@ -1,0 +1,96 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{ctex}
+\usepackage{multicol}
+\usepackage[margin=10mm,bottom=5mm,left=5mm,right=5mm,headsep=2mm]{geometry}
+\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage[Glenn]{fncychap}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{CJK}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\geometry{footskip=5mm,}
+\title{西北大学ICPC集训队 算法模板}
+\author{Northwest University @nervending}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{green2}{rgb}{0,0.6,0.4}
+\definecolor{CPPLight}  {HTML} {686868}
+\definecolor{CPPSteel}  {HTML} {888888}
+\definecolor{CPPDark}   {HTML} {262626}
+\definecolor{CPPBlue}   {HTML} {4172A3}
+\definecolor{CPPGreen}  {HTML} {487818}
+\definecolor{CPPBrown}  {HTML} {A07040}
+\definecolor{CPPRed}    {HTML} {AD4D3A}
+\definecolor{CPPViolet} {HTML} {7040A0}
+\definecolor{CPPGray}  {HTML} {B8B8B8}
+\pagestyle{fancy}
+\lhead{CUMTB}
+\lhead{\CJKfamily{hei} 西北大学ICPC集训队}
+\chead{}
+\rhead{Page \thepage}
+\rhead{\CJKfamily{hei} Page \thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\setlength{\columnsep}{10pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\parskip}{0pt}
+\setlength{\lineskip}{1pt}
+\titlespacing{\section} {0pt}{0pt}{0pt}
+\titlespacing{\subsection} {0pt}{0pt}{2pt}
+\lstset{frame=tb,
+  language=c++,
+  aboveskip=0pt,
+  belowskip=0pt,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle=\ttfamily,
+  numbers=left,
+  numberstyle=\small,
+  keywordstyle=\color[RGB]{40,40,255}\bfseries\underbar,
+  commentstyle=\ttfamily\color[RGB]{0,96,96},
+  stringstyle=\ttfamily\slshape\color[RGB]{128,0,0},
+  breaklines=true,
+  tabsize=2,
+  frame=single,
+  numberblanklines=false,
+  numbersep=5pt,
+  escapeinside=@@,
+  xleftmargin=5pt,xrightmargin=5pt,
+  framexleftmargin=1pt,framexrightmargin=0pt,
+  captionpos=t,
+  breaklines=true,
+  morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
+    reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
+    typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
+    dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,
+    char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,
+    void,export,nullptr,switch,volatile,class,extern,operator,template,wchar_t,
+    const,false,private,this,while,constexpr,float,protected,thread_local,
+    const_cast,for,public,throw,std},
+    emph={map,set,multimap,multiset,unordered_map,unordered_set,
+    unordered_multiset,unordered_multimap,vector,string,list,deque,
+    array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
+    random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
+    uniform_int_distribution,iterator,algorithm,functional,bing,numeric,},
+    emphstyle=\color{CPPViolet}\underbar,
+}
+\begin{document}
+\begin{CJK}{UTF8}{<font>}
+\begin{spacing}{0.80}
+\begin{multicols}{2}
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{plain}
+\tableofcontents
+\end{titlepage}
+\end{multicols}

@@ -1,0 +1,205 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{ctex}
+\usepackage{multicol}
+\usepackage[margin=10mm,bottom=5mm,left=5mm,right=5mm,headsep=2mm]{geometry}
+\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage[Glenn]{fncychap}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{CJK}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\geometry{footskip=5mm,}
+\title{西北大学ICPC集训队 算法模板}
+\author{Northwest University @nervending}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{green2}{rgb}{0,0.6,0.4}
+\definecolor{CPPLight}  {HTML} {686868}
+\definecolor{CPPSteel}  {HTML} {888888}
+\definecolor{CPPDark}   {HTML} {262626}
+\definecolor{CPPBlue}   {HTML} {4172A3}
+\definecolor{CPPGreen}  {HTML} {487818}
+\definecolor{CPPBrown}  {HTML} {A07040}
+\definecolor{CPPRed}    {HTML} {AD4D3A}
+\definecolor{CPPViolet} {HTML} {7040A0}
+\definecolor{CPPGray}  {HTML} {B8B8B8}
+\pagestyle{fancy}
+\lhead{CUMTB}
+\lhead{\CJKfamily{hei} 西北大学ICPC集训队}
+\chead{}
+\rhead{Page \thepage}
+\rhead{\CJKfamily{hei} Page \thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\setlength{\columnsep}{10pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\parskip}{0pt}
+\setlength{\lineskip}{1pt}
+\titlespacing{\section} {0pt}{0pt}{0pt}
+\titlespacing{\subsection} {0pt}{0pt}{2pt}
+\lstset{frame=tb,
+  language=c++,
+  aboveskip=0pt,
+  belowskip=0pt,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle=\ttfamily,
+  numbers=left,
+  numberstyle=\small,
+  keywordstyle=\color[RGB]{40,40,255}\bfseries\underbar,
+  commentstyle=\ttfamily\color[RGB]{0,96,96},
+  stringstyle=\ttfamily\slshape\color[RGB]{128,0,0},
+  breaklines=true,
+  tabsize=2,
+  frame=single,
+  numberblanklines=false,
+  numbersep=5pt,
+  escapeinside=@@,
+  xleftmargin=5pt,xrightmargin=5pt,
+  framexleftmargin=1pt,framexrightmargin=0pt,
+  captionpos=t,
+  breaklines=true,
+  morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
+    reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
+    typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
+    dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,
+    char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,
+    void,export,nullptr,switch,volatile,class,extern,operator,template,wchar_t,
+    const,false,private,this,while,constexpr,float,protected,thread_local,
+    const_cast,for,public,throw,std},
+    emph={map,set,multimap,multiset,unordered_map,unordered_set,
+    unordered_multiset,unordered_multimap,vector,string,list,deque,
+    array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
+    random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
+    uniform_int_distribution,iterator,algorithm,functional,bing,numeric,},
+    emphstyle=\color{CPPViolet}\underbar,
+}
+\begin{document}
+\begin{CJK}{UTF8}{<font>}
+\begin{spacing}{0.80}
+\begin{multicols}{2}
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{plain}
+\tableofcontents
+\end{titlepage}
+\end{multicols}
+\section{DataStruct}
+\subsection{基础-单调队列} \lstinputlisting{DataStruct/Monotonous-queue.cpp}
+\subsection{基础-单调栈} \lstinputlisting{DataStruct/Monotonous-stack.cpp}
+\subsection{基础-拉链法哈希表} \lstinputlisting{DataStruct/hash-map.cpp}
+\subsection{基础-可删堆} \lstinputlisting{DataStruct/deletable-heap.cpp}
+\subsection{并查集-非递归+按秩合并} \lstinputlisting{DataStruct/ufs-2.cpp}
+\subsection{并查集-可删除} \lstinputlisting{DataStruct/ufs.cpp}
+\subsection{并查集-可撤销} \lstinputlisting{DataStruct/voidable-ufs.cpp}
+\subsection{区间信息-数列分块} \lstinputlisting{DataStruct/square.cpp}
+\subsection{区间信息-ST表} \lstinputlisting{DataStruct/s-table.cpp}
+\subsection{区间信息-树状数组} \lstinputlisting{DataStruct/bit.cpp}
+\subsection{区间信息-扫描线算法} \lstinputlisting{DataStruct/scanline-algorithm.cpp}
+\subsection{区间信息-动态开点线段树} \lstinputlisting{DataStruct/dynamic-segtree-1.cpp}
+\subsection{区间信息-线段树优化建图} \lstinputlisting{DataStruct/segtree-graph.cpp}
+\subsection{区间信息-线段树合并} \lstinputlisting{DataStruct/segtree-merge.cpp}
+\subsection{区间信息-二维线段树} \lstinputlisting{DataStruct/xysegtree.cpp}
+\subsection{可持久化数据结构-01字典树} \lstinputlisting{DataStruct/p-01trie.cpp}
+\subsection{可持久化数据结构-主席树} \lstinputlisting{DataStruct/psegtree.cpp}
+\subsection{可持久化数据结构-主席树区间第k大} \lstinputlisting{DataStruct/kth.cpp}
+\subsection{可持久化数据结构-bit套主席树} \lstinputlisting{DataStruct/bit-pegtree.cpp}
+\subsection{可持久化数据结构-数组} \lstinputlisting{DataStruct/parray.cpp}
+\subsection{可持久化数据结构-并查集} \lstinputlisting{DataStruct/pufs.cpp}
+\subsection{平衡树-老司机树} \lstinputlisting{DataStruct/ODT.cpp}
+\subsection{平衡树-Treap} \lstinputlisting{DataStruct/treap.cpp}
+\subsection{平衡树-Splay} \lstinputlisting{DataStruct/SplayTree.cpp}
+\section{Graph}
+\subsection{基础-链式前向星} \lstinputlisting{Graph/graph.cpp}
+\subsection{最大流-isap算法} \lstinputlisting{Graph/isap.cpp}
+\subsection{最大流-dinic算法} \lstinputlisting{Graph/dinic.cpp}
+\subsection{网络流-上下界可行流-dinic} \lstinputlisting{Graph/boundflow-dinic.cpp}
+\subsection{网络流-上下界网络流-isap} \lstinputlisting{Graph/boundflow-all.cpp}
+\subsection{网络流-SW全局最小割算法} \lstinputlisting{Graph/Stoer-Wagner.cpp}
+\subsection{网络流-最大密度子图} \lstinputlisting{Graph/Maximum-density-subgraph.cpp}
+\subsection{费用流-原始对偶算法} \lstinputlisting{Graph/mncf-dij.cpp}
+\subsection{费用流-EK算法} \lstinputlisting{Graph/mncf-spfa.cpp}
+\subsection{强连通-求桥} \lstinputlisting{Graph/tarjan-bridge.cpp}
+\subsection{强连通-求割顶} \lstinputlisting{Graph/tarjan-point.cpp}
+\subsection{强连通-缩点} \lstinputlisting{Graph/tarjan-remake.cpp}
+\subsection{强连通-无向图双连通} \lstinputlisting{Graph/tarjan-undir.cpp}
+\subsection{最短路-Dijkstra算法} \lstinputlisting{Graph/dij.cpp}
+\subsection{最短路-floyd求最小环} \lstinputlisting{Graph/floyd-circle.cpp}
+\subsection{树-Prim算法} \lstinputlisting{Graph/prim.cpp}
+\subsection{树-灭绝树算法} \lstinputlisting{Graph/DominatorTree-DAG-topolgy.cpp}
+\subsection{树-支配树算法} \lstinputlisting{Graph/DominatorTree-Lengauer-Tarjan.cpp}
+\subsection{树-最小树形图} \lstinputlisting{Graph/mdst.cpp}
+\subsection{树-RMQ求LCA+树上链交} \lstinputlisting{Graph/RMQ-LCA.cpp}
+\subsection{树-点分治} \lstinputlisting{Graph/tree-divide-point.cpp}
+\subsection{树-轻重链剖分} \lstinputlisting{Graph/Heavy-chain-subdivision-edge.cpp}
+\subsection{杂项-欧拉路径} \lstinputlisting{Graph/euler-path.cpp}
+\subsection{杂项-三元环计数} \lstinputlisting{Graph/3-circle.cpp}
+\section{Geometry}
+\subsection{几何类-点类与基础} \lstinputlisting{Geometry/point.cpp}
+\subsection{几何类-直线类与线段类} \lstinputlisting{Geometry/line.cpp}
+\subsection{几何类-圆类} \lstinputlisting{Geometry/circle.cpp}
+\subsection{几何函数-多边形与半平面} \lstinputlisting{Geometry/polygon.cpp}
+\subsection{几何函数-圆的反演} \lstinputlisting{Geometry/circle-inversion.cpp}
+\subsection{几何函数-圆上整点} \lstinputlisting{Geometry/circle-int-point.cpp}
+\subsection{几何函数-多边形面积并} \lstinputlisting{Geometry/SimplePolygonAreaIns.cpp}
+\subsection{几何函数-辛普森积分} \lstinputlisting{Geometry/simpson.cpp}
+\subsection{几何函数-最小圆覆盖} \lstinputlisting{Geometry/smallest-circle-cover.cpp}
+\subsection{几何函数-最小球覆盖} \lstinputlisting{Geometry/simulated-annealing-ball-coverage.cpp}
+\section{Game}
+\subsection{SG函数} \lstinputlisting{Game/SG.cpp}
+\subsection{威佐夫游戏} \lstinputlisting{Game/Wythoff-Game.cpp}
+\subsection{K倍取石子博弈} \lstinputlisting{Game/k-times.cpp}
+\section{Math}
+\subsection{数论-基础函数} \lstinputlisting{Math/math-bass.cpp}
+\subsection{数论-欧拉函数线性筛} \lstinputlisting{Math/euler_phi.cpp}
+\subsection{数论-莫比乌斯函数线性筛} \lstinputlisting{Math/mobius.cpp}
+\subsection{数论-Miller Rabin素数判定} \lstinputlisting{Math/Miller-Rabin.cpp}
+\subsection{数论-Pollard Rho因子分解} \lstinputlisting{Math/Pollard-Rho.cpp}
+\subsection{多项式-拉格朗日插值} \lstinputlisting{Math/polysum.cpp}
+\subsection{多项式-快速傅立叶变换} \lstinputlisting{Math/fast-fourier-transform.cpp}
+\subsection{多项式-快速傅立叶变换-数组实现} \lstinputlisting{Math/fast-fourier-transform-2.cpp}
+\subsection{多项式-杜教BM} \lstinputlisting{Math/BM.cpp}
+\subsection{多项式-快速数论变换} \lstinputlisting{Math/fast-number-theory-transform.cpp}
+\subsection{多项式-快速沃尔什变换} \lstinputlisting{Math/fast-walsh-transform.cpp}
+\subsection{线性代数-异或线性基} \lstinputlisting{Math/linear-bass.cpp}
+\subsection{线性代数-线段树维护区间线性基} \lstinputlisting{Math/segtree-linearbass.cpp}
+\subsection{杂项-高精度整数类} \lstinputlisting{Math/bignumber.cpp}
+\subsection{杂项-分数类} \lstinputlisting{Math/farction.cpp}
+\subsection{杂项-N进制快速幂优化} \lstinputlisting{Math/nbase-powmod.cpp}
+\section{String}
+\subsection{KMP算法} \lstinputlisting{String/kmp.cpp}
+\subsection{manacher算法} \lstinputlisting{String/manacher.cpp}
+\subsection{后缀数组-倍增} \lstinputlisting{String/sa-logn.cpp}
+\subsection{最小表示算法} \lstinputlisting{String/minimum-representation.cpp}
+\subsection{字符串哈希} \lstinputlisting{String/hash.cpp}
+\subsection{自动机-tire树} \lstinputlisting{String/trie.cpp}
+\subsection{自动机-tire图} \lstinputlisting{String/trie-graph.cpp}
+\subsection{自动机-AC自动机} \lstinputlisting{String/AC-Automation.cpp}
+\subsection{自动机-后缀自动机} \lstinputlisting{String/Suffix-automaton.cpp}
+\subsection{自动机-回文自动机} \lstinputlisting{String/Palindromic-automaton.cpp}
+\section{Others}
+\subsection{常用头文件} \lstinputlisting{Others/head.cpp}
+\subsection{快速读写} \lstinputlisting{Others/fastio.cpp}
+\subsection{快速读写加强版} \lstinputlisting{Others/fastio-final.cpp}
+\subsection{LIS} \lstinputlisting{Others/lis.cpp}
+\subsection{矩阵运算} \lstinputlisting{Others/matrix-pow.cpp}
+\subsection{莫队算法} \lstinputlisting{Others/mo-algorithm.cpp}
+\subsection{大随机数} \lstinputlisting{Others/random-ull.cpp}
+\subsection{大质数} \lstinputlisting{Others/modp.cpp}
+\subsection{编译器位操作} \lstinputlisting{Others/bitwise.cpp}
+\subsection{最大子矩阵算法} \lstinputlisting{Others/maxsubmatirx.cpp}
+\subsection{约瑟夫环算法} \lstinputlisting{Others/joseph-ring.cpp}
+\subsection{java高精度} \lstinputlisting{Others/java.cpp}
+\end{spacing}
+\end{CJK}
+\end{document}
